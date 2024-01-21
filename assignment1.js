@@ -5,7 +5,7 @@
 *  (including web sites) or distributed to other students.
 * 
 *  Name: Ronald Capili Student ID: radcapili Date: January 20, 2023
-*
+*  GitHub Link: https://github.com/rracapili/WEB700/blob/assignment1/assignment1.js
 ********************************************************************************/ 
 
 function getRandomInt(max) {
