@@ -8,6 +8,9 @@
 *
 ********************************************************************************/ 
 
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+}
 
 var serverVerbs = ["GET","GET","GET","POST","GET","POST"]
 var serverPaths = ["/","/about","/contact","/login","/panel","/logout"]
@@ -35,4 +38,20 @@ function httpRequest(httpVerb, path) {
       }
     console.log(httpResponse)
 }
-httpRequest("GET","/")
+
+
+function automateTests(){
+    var testVerbs = ["GET","POST"]
+    var testPaths = ["/","/about","/contact","/login","/panel","/logout","/randomPath1","/randomPath2"]
+
+    function randomRequest(){
+        var randVerb = getRandomInt(2)
+        var randPath = getRandomInt(8)
+        console.log(randVerb + ", " + randPath)
+        httpRequest(testVerbs[randVerb],testPaths[randPath])
+    }
+    setInterval(randomRequest,1000)
+
+}
+
+automateTests()
